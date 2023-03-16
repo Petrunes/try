@@ -1,10 +1,9 @@
 import random as rd
-# text quest
+
 
 HP = 0
 GOLD = 0
 POWER = 0
-LUCK = 0
 
 
 def menu_stats():
