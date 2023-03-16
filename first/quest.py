@@ -1,10 +1,10 @@
 import random as rd
-
+# text quest
 
 HP = 0
 GOLD = 0
 POWER = 0
-# LUCK = 0
+LUCK = 0
 
 
 def menu_stats():
@@ -173,14 +173,16 @@ def game_loop():
         input(f"В пути {rd.choices(local_description, [0.3, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1,])}, можно идти дальше...")
 
 
-# инициализация новой игры и создание бесконечного цикла
-init_game(5, 10, 3)
+if __name__ == '__main__':
 
-while True:
-    game_loop()
-    if HP <= 0:
-        if input("Хотите начать сначала? (да:нажать-1/нет:нажать-2)") == '1':
-            init_game(5, 10, 3)
-        else:
-            print("game over")
-            break
+    # инициализация новой игры и создание бесконечного цикла
+    init_game(5, 10, 3)
+
+    while True:
+        game_loop()
+        if HP <= 0:
+            if input("Хотите начать сначала? (да:нажать-1/нет:нажать-2)") == '1':
+                init_game(5, 10, 3)
+            else:
+                print("game over")
+                break
